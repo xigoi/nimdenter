@@ -9,23 +9,31 @@ import nimdenter
 import std/strutils
 import std/unittest
 
-test "Nim website example":
-  const
+test "Nim website example": #{
+  const #{
     goodIndentation = staticRead("example.nim")
     noIndentation = goodIndentation.unindent
+  #}
   check goodIndentation.nimdent == goodIndentation
   check noIndentation.nimdent == goodIndentation
+#}
 
-test "Handling unclosed brace":
-  const
+test "Handling unclosed brace": #{
+  const #{
     programC = staticRead("unclosed.nim")
+  #}
   let program = programC
-  expect ValueError:
+  expect ValueError: #{
     discard program.nimdent
+  #}
+#}
 
-test "Handling unexpected closing brace":
-  const
+test "Handling unexpected closing brace": #{
+  const #{
     programC = staticRead("unexpected.nim")
+  #}
   let program = programC
-  expect ValueError:
+  expect ValueError: #{
     discard program.nimdent
+  #}
+#}

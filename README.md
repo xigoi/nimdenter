@@ -2,6 +2,12 @@
 
 Do you hate Nim because it's indentation-based? No worries! This tool will allow you to write Nim code with braces and automatically fill in the indentation for you!
 
+## Installation
+
+```
+nimble install nimdenter
+```
+
 ## Usage
 
 ```

@@ -1,6 +1,6 @@
 # Package
 
-version       = "2022.1.5"
+version       = "2022.1.7"
 author        = "Adam Blažek"
 description   = "A tool for people who don't like Nim's indentation-based syntax"
 license       = "GPL-3.0-or-later"
